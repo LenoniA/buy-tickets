@@ -2,7 +2,7 @@
  * Immutable Object.
  */
 
-export default class TicketTypeRequest {
+export class TicketTypeRequest {
   #type;
 
   #noOfTickets;

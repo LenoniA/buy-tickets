@@ -3,7 +3,7 @@ import InvalidPurchaseException from './lib/InvalidPurchaseException.js';
 import TicketPaymentService from '../thirdparty/paymentgateway/TicketPaymentService';
 import SeatReservationService from '../thirdparty/seatbooking/SeatReservationService';
 
-export default class TicketService {
+export class TicketService {
   #noOfAdults = 0;
   #noOfChildren = 0;
   #noOfInfants = 0;

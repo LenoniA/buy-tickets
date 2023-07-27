@@ -1,5 +1,5 @@
-import TicketService from '../src/pairtest/TicketService';
-import TicketTypeRequest from '../src/pairtest/lib/TicketTypeRequest';
+import TicketService from '../pairtest/TicketService';
+import TicketTypeRequest from '../pairtest/lib/TicketTypeRequest';
 
 describe('purchaseTickets', () => {
     let request;
