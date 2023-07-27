@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { Field } from './components/field'
 
 function App() {
+  const [numAdult, setNumAdult] = useState(0);
+  const [numChild, setNumChild] = useState(0);
+  const [numInf, setNumInf] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <div className='title'>Purchase Cinema Tickets</div>
+
+        <div className='main-content'>
+          <div className='content-wrapper'>
+            <div className='form'>
+              <Field type='Adult' price={20} setQuantity={setNumAdult} />
+              <Field type='Child' price={10} setQuantity={setNumChild} />
+              <Field type='Infant' price={0} setQuantity={setNumInf} />
+            </div>
+            
+            <div className='summary'>
+              <div>Total: {parseInt(numAdult) + parseInt(numChild) + parseInt(numInf)} Tickets</div>
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }
