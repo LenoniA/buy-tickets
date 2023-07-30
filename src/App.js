@@ -72,10 +72,10 @@ function App() {
               <div className='summary-content'>
                 <div className='field-title'>Total</div>
                   <div className='summary-field'>
-                    {parseInt(numAdult) + parseInt(numChild) + parseInt(numInf)} Ticket(s)
+                    {Number(parseInt(numAdult) + parseInt(numChild) + parseInt(numInf)) ? parseInt(numAdult) + parseInt(numChild) + parseInt(numInf) : '0'} Ticket(s)
                   </div>
                   <div className='summary-field'>
-                    £{parseInt(numAdult)*20 + parseInt(numChild)*20}.00
+                    £{Number(parseInt(numAdult)*20 + parseInt(numChild)*20) ? parseInt(numAdult)*20 + parseInt(numChild)*20 : '0'} .00
                   </div>
               </div>
               <button className='submit' onClick={purchaseTickets}>Submit</button>
