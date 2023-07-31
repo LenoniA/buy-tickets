@@ -1,9 +1,9 @@
-// import TicketTypeRequest from './lib/TicketTypeRequest.js';
+import TicketTypeRequest from './lib/TicketTypeRequest.js';
 import InvalidPurchaseException from './lib/InvalidPurchaseException.js';
 import TicketPaymentService from '../thirdparty/paymentgateway/TicketPaymentService';
 import SeatReservationService from '../thirdparty/seatbooking/SeatReservationService';
 
-export class TicketService {
+export default class TicketService {
   #noOfAdults = 0;
   #noOfChildren = 0;
   #noOfInfants = 0;
@@ -20,8 +20,6 @@ export class TicketService {
         case "INFANT":
           this.#noOfInfants += request.getNoOfTickets();
           break;  
-        default:
-          break;
       }
     });
   }

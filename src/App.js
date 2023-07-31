@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import { Field } from './components/field';
 import { ErrorDialog } from './components/errorDialog';
-import { TicketService } from './services/pairtest/TicketService';
-import { TicketTypeRequest } from './services/pairtest/lib/TicketTypeRequest';
+import TicketService from './services/pairtest/TicketService';
+import TicketTypeRequest from './services/pairtest/lib/TicketTypeRequest';
 import { Confirmation } from './components/confirmation';
 
 function App() {
