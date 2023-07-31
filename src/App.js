@@ -65,6 +65,7 @@ function App() {
           <Information />
 
           <div className='content-wrapper'>
+          <div className='content-title form-title'>Select Tickets</div>
             <div className='form'>
               <Field type='Adult' price={20} quantity={numAdult} setQuantity={setNumAdult} />
               <Field type='Child' price={10} quantity={numChild} setQuantity={setNumChild} />

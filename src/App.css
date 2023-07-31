@@ -69,7 +69,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 5vh 0;
+  padding: 5vh 10vw
 }
 
 /** Information **/
@@ -80,11 +80,10 @@ body {
   height: fit-content;
   border-radius: 4px;
   box-shadow: 0px 3px 10px #bac3cd;
-  margin: 40px;
-  margin-top: 0;
+  margin-bottom: 40px;
 }
 
-.info-title {
+.content-title {
   font-size: 1.4em;
   font-weight: 600;
   color: #124cd7;
@@ -106,6 +105,12 @@ body {
   background: #fff;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.form-title {
+  margin: 20px 20px 0 20px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 16px;
 }
 
 .summary {
