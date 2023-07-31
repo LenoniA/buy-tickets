@@ -20,6 +20,8 @@ export default class TicketService {
         case "INFANT":
           this.#noOfInfants += request.getNoOfTickets();
           break;  
+        default:
+          break;
       }
     });
   }
