@@ -5,6 +5,7 @@ import { ErrorDialog } from './components/errorDialog';
 import TicketService from './services/pairtest/TicketService';
 import TicketTypeRequest from './services/pairtest/lib/TicketTypeRequest';
 import { Confirmation } from './components/confirmation';
+import { Information } from './components/information';
 
 function App() {
   const [numAdult, setNumAdult] = useState(0);
@@ -61,6 +62,8 @@ function App() {
       <ErrorDialog error={"Error"} message={error} />
 
         <div className='main-content'>
+          <Information />
+
           <div className='content-wrapper'>
             <div className='form'>
               <Field type='Adult' price={20} quantity={numAdult} setQuantity={setNumAdult} />
@@ -75,7 +78,7 @@ function App() {
                     {Number(parseInt(numAdult) + parseInt(numChild) + parseInt(numInf)) ? parseInt(numAdult) + parseInt(numChild) + parseInt(numInf) : '0'} Ticket(s)
                   </div>
                   <div className='summary-field'>
-                    £{Number(parseInt(numAdult)*20 + parseInt(numChild)*20) ? parseInt(numAdult)*20 + parseInt(numChild)*20 : '0'} .00
+                    £{Number(parseInt(numAdult)*20 + parseInt(numChild)*20) ? parseInt(numAdult)*20 + parseInt(numChild)*20 : '0'}.00
                   </div>
               </div>
               <button className='submit' onClick={purchaseTickets}>Submit</button>
